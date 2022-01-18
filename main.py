@@ -64,10 +64,7 @@ class RobsFundamentalUniverseSelectionModel(FundamentalUniverseSelectionModel):
         
     def SelectFine(self, algorithm, fine):
         '''Performs a selection based on several fundamental criteria.'''
-        filteredFine = [x for x in fine if (x.CompanyReference.CountryId == "USA" 
-                                            or x.CompanyReference.CountryId == "GBR"
-                                            or x.CompanyReference.CountryId == "DEU"
-                                            or x.CompanyReference.CountryId == "FRA")
+        filteredFine = [x for x in fine if (x.CompanyReference.CountryId == "SWE" 
                                         and x.MarketCap > 2000000000
                                         and x.ValuationRatios.PERatio <= 25
                                         and x.ValuationRatios.PERatio > 0
